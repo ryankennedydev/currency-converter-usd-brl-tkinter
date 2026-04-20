@@ -13,8 +13,6 @@ windows = tk.Tk()
 label_view_convert = tk.Label(windows, text="")
 
 def view_convertor():
-
-    coin = float(values.get())
     
 
     
@@ -24,22 +22,22 @@ def view_convertor():
         coin_convert = coin * value_moeda
 
         label_view_convert.config(
-            text=f"YOUR VALUE IN USD COIN: US${coin_convert:.2f}"
+            text=f"YOUR VALUE IN USD: US${coin_convert:.2f}"
         )
     except:
         
         label_view_convert.config(
                 text="ONLY NUMBERS PLS"
         )
-        
+
 banner_image = tk.PhotoImage(file="banner.png")
-banner_image = banner_image.subsample(2)
+banner_image = banner_image.subsample(1)
 banner = tk.Label(windows, image=banner_image)
 
 
 
 
-tittle = tk.Label(windows, text="WELCOME TO CONVERSOR OF BRL FOR USD")
+tittle = tk.Label(windows, text="WELCOME TO THE BRL TO USD CONVERTER")
 
 values = tk.Entry(windows)
 
